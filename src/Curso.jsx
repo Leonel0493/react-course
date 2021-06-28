@@ -1,5 +1,8 @@
 import React, { Fragment } from 'react'
 
+const mayorDeEdad = edad => edad >= 18
+const persona = { "nombre": "Leonel", "apellido": "Rivas", "edad": 17 }
+
 const Curso = () => (
     <article className="s-shadow-bottom">
 
@@ -8,8 +11,8 @@ const Curso = () => (
         </div>
 
         <div className="s-bg-white s-pxy-2">
-            <h3>Curso Bases de Datos Desde Cero</h3>
-            <p className="s-mb-0">Diseña, estructura y administra bases de datos SQL y crea un sistema de facturación</p>
+            <h3>{`Hola, me llamo ${persona.nombre} y tengo ${persona.edad}`}</h3>
+            <p className="s-mb-0">{mayorDeEdad(persona.edad) ? "Soy mayor de edad" : "Soy menor de edad"}</p>
         </div>
         <footer className="s-cross-center s-bg-grey s-pxy-2 s-radius-br s-radius-bl">
 
@@ -20,7 +23,7 @@ const Curso = () => (
                 </div>
 
             </div>
-            <p className="s-mb-0">Prof. Alexys Lozada</p>
+            <p className="s-mb-0">{`Prof. ${persona.nombre} ${persona.apellido}`}</p>
 
             <div className="button s-to-right">$40USD</div>
         </footer>
