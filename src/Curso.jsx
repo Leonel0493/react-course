@@ -12,7 +12,11 @@ const Curso = () => (
 
         <div className="s-bg-white s-pxy-2">
             <h3>{`Hola, me llamo ${persona.nombre} y tengo ${persona.edad}`}</h3>
-            <p className="s-mb-0">{mayorDeEdad(persona.edad) ? "Soy mayor de edad" : "Soy menor de edad"}</p>
+            <p className="s-mb-0">
+                {
+                    mayorDeEdad(persona.edad) ? "Soy mayor de edad" : "Soy menor de edad"
+                }
+            </p>
         </div>
         <footer className="s-cross-center s-bg-grey s-pxy-2 s-radius-br s-radius-bl">
 
