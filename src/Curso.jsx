@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 
 const mayorDeEdad = edad => edad >= 18
-const persona = { "nombre": "Leonel", "apellido": "Rivas", "edad": 17 }
+const persona = { "nombre": "Leonel", "apellido": "Rivas", "edad": 19 }
 
 const Curso = () => (
     <article className="s-shadow-bottom">
@@ -12,11 +12,13 @@ const Curso = () => (
 
         <div className="s-bg-white s-pxy-2">
             <h3>{`Hola, me llamo ${persona.nombre} y tengo ${persona.edad}`}</h3>
-            <p className="s-mb-0">
-                {
-                    mayorDeEdad(persona.edad) ? "Soy mayor de edad" : "Soy menor de edad"
-                }
-            </p>
+            {
+                mayorDeEdad(persona.edad) 
+                ?
+                    <p className="s-mb-0">Soy mayor de edad</p>
+                :
+                    <p className="s-mb-0">Soy menor de edad</p>
+            }
         </div>
         <footer className="s-cross-center s-bg-grey s-pxy-2 s-radius-br s-radius-bl">
 
