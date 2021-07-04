@@ -1,8 +1,10 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
 import Curso from './Curso';
-import "./Styles/style.scss"
+import Banner from './Banner';
+import Formulario from './Formulario';
+import "./Styles/style.scss";
 
-const cursos = [
+/*const cursos = [
   {
     "titulo": "Curso de Rasengan",
     "image": "https://laverdadnoticias.com/__export/1606513512175/sites/laverdad/img/2020/11/27/naruto_5_jutsu_que_encajarian_mejor_con_el_heroe_de_konoha_que_rrasengan.jpg_1183029055.jpg",
@@ -27,38 +29,12 @@ const cursos = [
     "profesor": "Hanabi",
     "prof_image": "https://pm1.narvii.com/6801/79fe99d902ca0f453650913c85ff0834e1b8fa41v2_hq.jpg"
   }
-]
+]*/
 
 const App = () => (
   <>
-    <div className="main-banner img-container l-section" id="main-banner">
-      <div className="ed-grid lg-grid-6">
-        <div className="lg-cols-4 lg-x-2">
-          <img className="main-banner__img" src="https://i.pinimg.com/originals/e7/38/db/e738db3d88bc3c53cf29706f26031fd5.png" alt="Banner Image" />
-          <div className="main-banner__data s-center">
-            <p className="t2 s-mb-0">Cursos de EDteam</p>
-            <p>Tu futuro te esta esperando</p>
-            <a href="#" className="button">Suscribete</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div className="ed-grid m-grid-3">
-      {
-        cursos.map( 
-          c => 
-            <Curso 
-              title={c.titulo} 
-              image={c.image} 
-              description={c.description} 
-              price={c.price} 
-              profesor={c.price} 
-              prof_image={c.prof_image}
-            />
-        )
-      }
-    </div>
+    <Banner />
+    <Formulario  />
   </>
 )
 
