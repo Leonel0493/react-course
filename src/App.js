@@ -34,7 +34,7 @@ import "./Styles/style.scss";
 const App = () => (
   <>
     <Banner />
-    <Formulario />
+    <Formulario formName="clase de Edteam"/>
   </>
 )
 
