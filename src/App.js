@@ -4,12 +4,15 @@ import CourseGrid from './CourseGrid';
 import Course from './Course';
 import Formulario from './Formulario';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import MainMenu from './MainMenu';
 import "./Styles/style.scss";
+import "./Styles/header.scss"
 
 
 
 const App = () => (
   <Router>
+    <MainMenu />
     <Switch>
       <Route path="/" exact component={Banner} />
       <Route path="/cursos/:id" component={Course} />
