@@ -1,11 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
+
+//Link reemplaza a <a></a> y to a href para seguir con una spa
 
 const Curso = ({ id, title, image, description, price, profesor, prof_image }) => (
     <article className="s-shadow-bottom" id={id}>
 
         <div className="s-ratio-16-9 img-container s-radius-tl s-radius-tr">
-            <img src={image} alt={title} />
+            <Link to={`/cursos/${id}`} >
+                <img src={image} alt={title} />
+            </Link>
         </div>
 
         <div className="s-bg-white s-pxy-2">
