@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import Banner from './Banner';
 import CourseGrid from './CourseGrid';
+import Course from './Course';
 import Formulario from './Formulario';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import "./Styles/style.scss";
@@ -11,8 +12,9 @@ const App = () => (
   <Router>
     <Switch>
       <Route path="/" exact component={Banner} />
-      <Route path="/cursos" exact component={CourseGrid} />
-      <Route path="/formulario" exact component={() => <Formulario name="Pagina de Contacto" />} />
+      <Route path="/cursos/:id" component={Course} />
+      <Route path="/cursos" component={CourseGrid} />
+      <Route path="/formulario" component={() => <Formulario name="Pagina de Contacto" />} />
       <Route component={
         () => (
           <div className="ed-grid">
@@ -35,3 +37,4 @@ export default App;
 // 5: img siempre se cierra
 // 6: clas => className
 // 7: for => htmlFor
+// 8: nomenclatura para parametros por ruta es :nombreParametro
