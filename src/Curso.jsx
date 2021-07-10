@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Curso = ({ title, image, description, price, profesor, prof_image }) => (
-    <article className="s-shadow-bottom" id={title}>
+const Curso = ({ id, title, image, description, price, profesor, prof_image }) => (
+    <article className="s-shadow-bottom" id={id}>
 
         <div className="s-ratio-16-9 img-container s-radius-tl s-radius-tr">
             <img src={image} alt={title} />
